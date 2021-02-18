@@ -2,9 +2,9 @@
 
 namespace ProjectRebel\Blink;
 
+use ProjectRebel\Blink\Commands\BlinkCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use ProjectRebel\Blink\Commands\BlinkCommand;
 
 class BlinkServiceProvider extends PackageServiceProvider
 {

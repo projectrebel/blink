@@ -6,7 +6,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/projectrebel/blink.svg?style=flat-square)](https://packagist.org/packages/projectrebel/blink)
 
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+Blink is a frontend implementation for [Wink](https://github.com/themsaid/wink). Blink + Wink gives you a full working Laravel blog with minimal configuration.
 
 ## Installation
 

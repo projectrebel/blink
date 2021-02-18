@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\Skeleton\Commands;
+namespace ProjectRebel\Blink\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class BlinkCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'blink';
 
     public $description = 'My command';
 

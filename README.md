@@ -1,4 +1,4 @@
-# A Laravel blog frontend for themsaid's wink
+# A complete Laravel blog package
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/projectrebel/blink.svg?style=flat-square)](https://packagist.org/packages/projectrebel/blink)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/projectrebel/blink/run-tests?label=tests)](https://github.com/projectrebel/blink/actions?query=workflow%3ATests+branch%3Amaster)

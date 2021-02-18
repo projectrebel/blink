@@ -1,6 +1,6 @@
 {
     "name": "projectrebel/blink",
-    "description": "A Laravel blog frontend for themsaid's wink",
+    "description": "A complete Laravel blog package",
     "keywords": [
         "projectrebel",
         "blink"

@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": "^7.3",
-        "illuminate/database": "^7.0|^8.0",
+        "laravel/framework": "^7.0|^8.0",
         "themsaid/wink": "^1.2.0"
     },
     "require-dev": {
@@ -26,8 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ProjectRebel\\Blink\\": "src",
-            "ProjectRebel\\Blink\\Database\\Factories\\": "database/factories"
+            "ProjectRebel\\Blink\\": "src"
         }
     },
     "autoload-dev": {

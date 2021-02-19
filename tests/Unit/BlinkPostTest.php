@@ -12,9 +12,8 @@ class BlinkPostTest extends TestCase
 
     public function testItCalculatesAReadTimeUsingTheConfigValue()
     {
-        $blinkPost = BlinkPost::factory()->make([
-            'body' => $this->faker->paragraphs(50, true),
-        ]);
+        $blinkPost = new BlinkPost;
+        $blinkPost->body = $this->faker->paragraphs(50, true);
 
         $wordCount = str_word_count(strip_tags($blinkPost->content));
         $this->assertEquals(round($wordCount / 265), $blinkPost->readingTime);

@@ -2,9 +2,9 @@
 
 namespace ProjectRebel\Blink\Tests\Feature\Http\Controllers;
 
+use Illuminate\Foundation\Testing\WithFaker;
 use ProjectRebel\Blink\BlinkPost;
 use ProjectRebel\Blink\Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
 
 class BlogControllerTest extends TestCase
 {

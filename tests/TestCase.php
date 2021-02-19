@@ -3,8 +3,8 @@
 namespace ProjectRebel\Blink\Tests;
 
 use Illuminate\Support\Facades\Route;
-use ProjectRebel\Blink\BlinkServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
+use ProjectRebel\Blink\BlinkServiceProvider;
 
 class TestCase extends Orchestra
 {

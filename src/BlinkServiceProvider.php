@@ -24,7 +24,7 @@ class BlinkServiceProvider extends ServiceProvider
 
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'blink');
 
-        Route::macro('blink', function(string $prefix) {
+        Route::macro('blink', function (string $prefix) {
             Route::prefix($prefix)->group(function () {
                 Route::get('/', [BlogController::class, 'index']);
                 Route::get('/{slug}', [BlogController::class, 'show']);

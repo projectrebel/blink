@@ -2,9 +2,9 @@
 
 namespace ProjectRebel\Blink\Tests\Unit;
 
+use Illuminate\Foundation\Testing\WithFaker;
 use ProjectRebel\Blink\BlinkPost;
 use ProjectRebel\Blink\Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
 
 class BlinkPostTest extends TestCase
 {
@@ -13,7 +13,7 @@ class BlinkPostTest extends TestCase
     public function testItCalculatesAReadTimeUsingTheConfigValue()
     {
         $blinkPost = BlinkPost::factory()->make([
-            'body' => $this->faker->paragraphs(50, true)
+            'body' => $this->faker->paragraphs(50, true),
         ]);
 
         $wordCount = str_word_count(strip_tags($blinkPost->content));

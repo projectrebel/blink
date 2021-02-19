@@ -2,14 +2,17 @@
 
 namespace ProjectRebel\Blink\Tests;
 
-use Orchestra\Testbench\TestCase as Orchestra;
+use Illuminate\Support\Facades\Route;
 use ProjectRebel\Blink\BlinkServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
     public function setUp(): void
     {
         parent::setUp();
+        $this->withoutExceptionHandling();
+        Route::blink('blog');
     }
 
     protected function getPackageProviders($app)

@@ -2,8 +2,10 @@
 
 namespace ProjectRebel\Blink;
 
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use ProjectRebel\Blink\Commands\BlinkCommand;
+use ProjectRebel\Blink\Http\Controllers\BlogController;
 
 class BlinkServiceProvider extends ServiceProvider
 {
@@ -18,6 +20,16 @@ class BlinkServiceProvider extends ServiceProvider
                 BlinkCommand::class,
             ]);
         }
+
+
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'blink');
+
+        Route::macro('blink', function(string $prefix) {
+            Route::prefix($prefix)->group(function () {
+                Route::get('/', [BlogController::class, 'index']);
+                Route::get('/{slug}', [BlogController::class, 'show']);
+            });
+        });
     }
 
     public function register()

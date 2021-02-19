@@ -3,6 +3,7 @@
 namespace ProjectRebel\Blink;
 
 use Illuminate\Support\ServiceProvider;
+use ProjectRebel\Blink\Commands\BlinkCommand;
 
 class BlinkServiceProvider extends ServiceProvider
 {
@@ -12,6 +13,10 @@ class BlinkServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/../config/blink.php' => config_path('blink.php'),
             ], 'blink-config');
+
+            $this->commands([
+                BlinkCommand::class,
+            ]);
         }
     }
 

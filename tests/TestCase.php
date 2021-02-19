@@ -13,7 +13,9 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'ProjectRebel\\Blink\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            function (string $modelName) {
+                return 'ProjectRebel\\Blink\\Database\\Factories\\'.class_basename($modelName).'Factory';
+            }
         );
     }
 
@@ -32,10 +34,5 @@ class TestCase extends Orchestra
             'database' => ':memory:',
             'prefix' => '',
         ]);
-
-        /*
-        include_once __DIR__.'/../database/migrations/create_blink_table.php.stub';
-        (new \CreatePackageTable())->up();
-        */
     }
 }

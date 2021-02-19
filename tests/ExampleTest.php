@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Skeleton\Tests;
+namespace ProjectRebel\Blink\Tests;
 
 class ExampleTest extends TestCase
 {

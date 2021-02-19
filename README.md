@@ -21,14 +21,19 @@ You can publish the config file with:
 php artisan vendor:publish --provider="ProjectRebel\Blink\BlinkServiceProvider" --tag="blink-config"
 ```
 
-This is the contents of the published config file:
+<!-- This is the contents of the published config file:
 
 ```php
 return [
 ];
-```
+``` -->
 
 ## Usage
+
+There are a few different config values that are accessible through your `.env` file.
+```env
+BLINK_WPM=265 # Used to calculate reading times for blog posts
+```
 
 ```php
 $blink = new ProjectRebel\Blink();

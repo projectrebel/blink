@@ -2,18 +2,21 @@
 
 namespace ProjectRebel\Blink;
 
-use ProjectRebel\Blink\Commands\BlinkCommand;
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
-class BlinkServiceProvider extends PackageServiceProvider
+class BlinkServiceProvider extends ServiceProvider
 {
-    public function configurePackage(Package $package): void
+    public function boot()
     {
-        $package
-            ->name('blink')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasCommand(BlinkCommand::class);
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../config/blink.php' => config_path('blink.php'),
+            ], 'blink-config');
+        }
+    }
+
+    public function register()
+    {
+        $this->mergeConfigFrom(__DIR__.'/../config/blink.php', 'blink');
     }
 }
